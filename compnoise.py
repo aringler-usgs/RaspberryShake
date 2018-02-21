@@ -82,6 +82,7 @@ paz= {'poles': [(149.67189745697971+24.351503981794483j), (149.67189745697971-24
 files = glob.glob('/tr1/telemetry_days/AM*/' + str(stime.year) + '/*' + str(stime.julday).zfill(3) + '/*EH*')
 
 
+
 st = reduce(operator.add, map(read,files))
 # You need to be careful as the clock gitter will make the trim function flaky
 st.trim(starttime=stime, endtime=etime)
